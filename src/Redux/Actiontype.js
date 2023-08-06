@@ -1,0 +1,16 @@
+export const Header_Set = 'Header_Set';
+// MODAL
+export const SELECT_SECTION_MODAL = 'SELECT_SECTION_MODAL';
+export const ADDPAGE_MODAL = 'ADDPAGE_MODAL';
+
+export const ADD_EDITOR_LIST = 'ADD_EDITOR_LIST';
+export const SET_EDITOR_INDEX = 'SET_EDITOR_INDEX';
+export const SET_EDITOR_BOX_INDEX = 'SET_EDITOR_BOX_INDEX';
+export const UPDATE_EDIT_BOX = 'UPDATE_EDIT_BOX';
+export const UPDATE_EDIT_BOX_ARRAY = 'UPDATE_EDIT_BOX_ARRAY';
+export const CLEAR_EDIT_LIST = 'CLEAR_EDIT_LIST';
+export const SET_EDIT_LIST = 'SET_EDIT_LIST';
+
+// WORKSPACE
+export const SET_WORKSPACE = 'SET_WORKSPACE';
+export const UPDATE_WORKSPACE = 'UPDATE_WORKSPACE';
