@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SetModal } from "./Redux/Action/Modalaction";
-import { SetEditorBoxIndex, SetEditorIndex } from "./Redux/Action/Editorlistaction";
+import { SetEditorBoxIndex, SetEditorIndex, Set_Edit_List } from "./Redux/Action/Editorlistaction";
 import { ComponentsList } from "./components/Data/Data";
 
 const Editor = () => {
@@ -17,6 +17,14 @@ const Editor = () => {
   };
   const EditSection =(id)=>{
     Dispatch(SetEditorBoxIndex(id));
+  }
+  const DeleteSection = (index)=>{
+    const DuplicateArray = EditorList?.List?.filter((item,idx)=>{
+      return index !=idx
+    });
+    Dispatch(Set_Edit_List({
+      value:DuplicateArray
+    }))
   }
   return (
     <div>
@@ -37,7 +45,7 @@ const Editor = () => {
               <div key={index} className="editor-section-holder">
                 <div className="editor-section-wrapper" onDoubleClick={()=>EditSection(index)}>
                   {/* <div className="editor-wrapper-btn"> */}
-                    <button className="delete-section-btn">Delete section</button>
+                    <button className="delete-section-btn" onClick={()=>DeleteSection(index)}>Delete section</button>
                   {/* </div> */}
                   <div className={`editor-div${index}`}> 
 
